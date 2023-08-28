@@ -55,7 +55,7 @@ sacremoses==0.0.41
 # scikit-learn==0.23.1
 # scipy==1.4.1
 seaborn==0.10.1
-sentencepiece==0.1.86
+# sentencepiece==0.1.86
 sentry-sdk==0.14.3
 shortuuid==1.0.1
 six==1.14.0
