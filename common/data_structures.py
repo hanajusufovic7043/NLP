@@ -287,7 +287,9 @@ class Examples:
             for n_id in sel_neg_ids:
                 neg.append((nl_id, n_id, 0))
         sampler = RandomSampler(pos + neg)
-        print(len(pos) + len(neg))
+        print() print('=' * 100) 
+        print(len(pos) + len(neg)) 
+        print('=' * 100) print()
         dataset = DataLoader(pos + neg, batch_size=batch_size, sampler=sampler)
         return dataset
 
