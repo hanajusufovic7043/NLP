@@ -286,8 +286,13 @@ class Examples:
             sel_neg_ids = exclude_and_sample(set(self.PL_index.keys()), pos_pl_ids, sample_num)
             for n_id in sel_neg_ids:
                 neg.append((nl_id, n_id, 0))
+        print() 
+        print('=' * 100) 
+        print(len(pos) + len(neg)) 
+        print('=' * 100) 
+        print()        
         sampler = RandomSampler(pos + neg)
-        print(len(pos) + len(neg))
+        
         dataset = DataLoader(pos + neg, batch_size=batch_size, sampler=sampler)
         return dataset
 
