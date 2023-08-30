@@ -38,6 +38,7 @@ def load_examples(data_dir, data_type, model: TwinBert, overwrite=False, num_lim
     :return:
     """
     cache_dir = os.path.join(data_dir, "cache")
+    print("data dir", data_dir)
     if not os.path.isdir(cache_dir):
         os.mkdir(cache_dir)
     cached_file = os.path.join(cache_dir, cache_file_name.format(data_type))
