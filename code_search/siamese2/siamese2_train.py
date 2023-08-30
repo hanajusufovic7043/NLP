@@ -1,4 +1,5 @@
 import sys
+import os
 
 sys.path.append("../..")
 from code_search.twin.twin_train import get_train_args, init_train_env, load_examples, train_with_neg_sampling, train, \
@@ -6,6 +7,8 @@ from code_search.twin.twin_train import get_train_args, init_train_env, load_exa
 
 
 def main():
+    current_path = os.getcwd()
+    print(current_path)
     args = get_train_args()
     model = init_train_env(args, tbert_type='siamese2')
     valid_examples = load_examples(args.data_dir, data_type="valid", model=model, num_limit=args.valid_num,
